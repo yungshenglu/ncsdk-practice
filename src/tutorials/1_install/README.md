@@ -241,7 +241,7 @@ The simplest way to use the NCS within a docker container is to do it from a con
 ---
 ## 1.6 Troublshooting (optional)
 
-If you meet some troubles as follow, you can try to solve it by the following instructions! Besides, if you have other good solution, you can issue me.
+* Please follow [Movidius Forum](https://ncsforum.movidius.com/).
 
 ---
 ## References
@@ -250,6 +250,7 @@ If you meet some troubles as follow, you can try to solve it by the following in
 * [Intel® Movidius™ Neural Compute SDK Python API v2](https://movidius.github.io/ncsdk/ncapi/ncapi2/py_api/readme.html)
 * [GitHub - movidius/ncsdk](https://github.com/movidius/ncsdk)
 * [GitHub - movidius/ncappzoo](https://github.com/movidius/ncappzoo)
+* [Intel® Movidius™ Forum](https://ncsforum.movidius.com/)
 
 ---
 ## Contributor
