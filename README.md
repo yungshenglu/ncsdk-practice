@@ -49,6 +49,8 @@ To know how to contribute this repository, please refer to this [document](CONTR
 * [Intel® Movidius™ Neural Compute SDK Python API v2](https://movidius.github.io/ncsdk/ncapi/ncapi2/py_api/readme.html)
 * [GitHub - movidius/ncsdk](https://github.com/movidius/ncsdk)
 * [GitHub - movidius/ncappzoo](https://github.com/movidius/ncappzoo)
+* [NCSDK Python API 2.x](https://movidius.github.io/ncsdk/ncapi/ncapi2/py_api/readme.html)
+* [NCSDK C API 2.x](https://movidius.github.io/ncsdk/ncapi/ncapi2/c_api/readme.html)
 * [Intel® Movidius™ Forum](https://ncsforum.movidius.com/)
 
 ---

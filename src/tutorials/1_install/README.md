@@ -241,11 +241,11 @@ The simplest way to use the NCS within a docker container is to do it from a con
     $ make run
     ```
 
-We provide the example code [`./examples/hello_ncs_py/`](examples/hello_ncs_py/) and [`./examples/hello_ncs_cpp/`](examples/hello_ncs_cpp/) in this tutorial. You can run the examples by the following commands:
+We provide the example code [`./examples/apps/hello_ncs_py/`](examples/apps/hello_ncs_py/) and [`./examples/apps/hello_ncs_cpp/`](examples/apps/hello_ncs_cpp/) in this tutorial. You can run the examples by the following commands:
 
-* `./examples/hello_ncs_cpp/`
+* `./examples/apps/hello_ncs_cpp/`
     ```bash
-    # Make sure your current directory is "./examples/hello_ncs_cpp/"
+    # Make sure your current directory is "./examples/apps/hello_ncs_cpp/"
     $ make run
     making hello_ncs_cpp
     g++ hello_ncs.cpp -o hello_ncs_cpp -lmvnc
@@ -257,10 +257,11 @@ We provide the example code [`./examples/hello_ncs_py/`](examples/hello_ncs_py/)
     Goodbye NCS!  Device Closed normally.
     NCS device working.
     ```
-* `./examples/hello_ncs_py/`
+* `./examples/apps/hello_ncs_py/`
     ```bash
-    # Make sure your current directory is "./examples/hello_ncs_py/"
+    # Make sure your current directory is "./examples/apps/hello_ncs_py/"
     $ make run
+    ......
     ......
     Hello NCS! Device opened normally.
     Goodbye NCS! Device closed normally.
@@ -268,7 +269,38 @@ We provide the example code [`./examples/hello_ncs_py/`](examples/hello_ncs_py/)
     ```
 
 ---
-## 1.6 Troublshooting (optional)
+## 1.6 More examples in Caffe and TensorFlow
+
+The following examples which used Caffe and TensorFlow are also provided in NCSDK. The training data are stored in `./examples/data/`.
+
+* Caffe (`./examples/caffe/`)
+    ```bash
+    # Removes all the temporary and target files
+    $ make clean
+    # Run the Makefile
+    $ make all
+    # Run "run.py"
+    $ make run_py
+    # Run "run.cpp"
+    % make run_cpp
+    ```
+    * **AlexNet**
+    * **GoogLeNet**
+    * **SqueezeNet v1.0**
+* TensorFlow (`./examples/tensorflow/`)
+    ```bash
+    # Removes all the temporary and target files
+    $ make clean
+    # Run the Makefile
+    $ make all
+    # Run "run.py"
+    $ make run
+    ```
+    * **Inception v1**
+    * **Inception v3**
+
+---
+## 1.7 Troublshooting (optional)
 
 * Please follow [Movidius Forum](https://ncsforum.movidius.com/).
 
@@ -279,6 +311,8 @@ We provide the example code [`./examples/hello_ncs_py/`](examples/hello_ncs_py/)
 * [Intel® Movidius™ Neural Compute SDK Python API v2](https://movidius.github.io/ncsdk/ncapi/ncapi2/py_api/readme.html)
 * [GitHub - movidius/ncsdk](https://github.com/movidius/ncsdk)
 * [GitHub - movidius/ncappzoo](https://github.com/movidius/ncappzoo)
+* [NCSDK Python API 2.x](https://movidius.github.io/ncsdk/ncapi/ncapi2/py_api/readme.html)
+* [NCSDK C API 2.x](https://movidius.github.io/ncsdk/ncapi/ncapi2/c_api/readme.html)
 * [Intel® Movidius™ Forum](https://ncsforum.movidius.com/)
 
 ---
