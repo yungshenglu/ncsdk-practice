@@ -2,12 +2,13 @@
 
 This directory is used for learning how to use Intel® Movidius™ NCSDK.
 
-* **NOTICE:** The following opreations are used in **Ubuntu Linux 16.04 LTS**.
+* **NOTICE:** The following opreations are used in **Ubuntu Linux 16.04 LTS** and **NCSDK 2.0**.
 
 ---
 ## Contents
 
 1. [Installation](1_install/)
+2. [Build a Application With Intel Movidius NCS](2_apps/)
 
 (To be updated.)
 

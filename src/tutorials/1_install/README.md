@@ -2,7 +2,7 @@
 
 We are going to install Intel® Movidius™ NCSDK in this tutorial. There are some prerequisite as follow in this installation.
 
-* **Prerequisite**
+* Prerequisite
     * Intel® Movidius™ Neural Compute Stick (NCS)
     * Git
     * Development computer with a supported OS:
@@ -15,6 +15,7 @@ We are going to install Intel® Movidius™ NCSDK in this tutorial. There are so
             * virtualenv ([follow here!](https://movidius.github.io/ncsdk/virtualenv.html))
             * Internet connection
             * USB camera (optional, needed for some examples)
+* **NOTICE:** The following opreations are used in **Ubuntu Linux 16.04 LTS** and **NCSDK 2.0**.
 
 ---
 ## 1.1 Basic installation on Ubuntu Linux
