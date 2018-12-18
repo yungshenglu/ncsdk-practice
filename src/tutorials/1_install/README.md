@@ -235,8 +235,37 @@ The simplest way to use the NCS within a docker container is to do it from a con
     # Make sure your current directory is "./ncsdk/"
     $ make examples
     ```
-3. To build and run individual examples
+3. To build and run individual examples, run the following command within that example's directory
+    ```bash
+    # Make sure your current directory is in that example's directory
+    $ make run
+    ```
 
+We provide the example code [`./examples/hello_ncs_py/`](examples/hello_ncs_py/) and [`./examples/hello_ncs_cpp/`](examples/hello_ncs_cpp/) in this tutorial. You can run the examples by the following commands:
+
+* `./examples/hello_ncs_cpp/`
+    ```bash
+    # Make sure your current directory is "./examples/hello_ncs_cpp/"
+    $ make run
+    making hello_ncs_cpp
+    g++ hello_ncs.cpp -o hello_ncs_cpp -lmvnc
+    Created hello_ncs_cpp executable
+
+    making run
+    ./hello_ncs_cpp;
+    Hello NCS! Device opened normally.
+    Goodbye NCS!  Device Closed normally.
+    NCS device working.
+    ```
+* `./examples/hello_ncs_py/`
+    ```bash
+    # Make sure your current directory is "./examples/hello_ncs_py/"
+    $ make run
+    ......
+    Hello NCS! Device opened normally.
+    Goodbye NCS! Device closed normally.
+    NCS device working.
+    ```
 
 ---
 ## 1.6 Troublshooting (optional)
