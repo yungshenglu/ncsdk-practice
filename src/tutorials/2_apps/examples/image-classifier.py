@@ -103,7 +103,6 @@ def main():
     graph, fifo_in, fifo_out = load_graph(device)
     # Offload a single image onto the Intel® Movidius™ NCS to run inference
     img = pre_process_image()
-    print('...')
     # Read and print inference results from the Intel® Movidius™ NCS
     infer_image(graph, img, fifo_in, fifo_out)
     # Unload the graph and close the device

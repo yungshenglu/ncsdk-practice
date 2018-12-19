@@ -215,7 +215,7 @@ def clean_up(device, graph, fifo_in, fifo_out):
 
     ==============================================================
     ```
-    ![](https://movidius.github.io/blog/images/cat-inferred.png)
+    ![](results/result_GoogLeNet.png)
 
 ---
 ## 2.8 Configuration
@@ -227,20 +227,67 @@ This example runs **GoogLeNet** by default, but you can configure it run other p
 1. AlexNet (Caffe): `./examples/caffe/AlexNet/`
     ```bash
     # Make sure your current directory is "./examples/"
+    $ make alexnet
     $ python3 image-classifier.py --graph ./caffe/AlexNet/graph --dim 227 227 --image ./data/images/pic_053.jpg
+    # You will get a similar result as follow:
+    ==============================================================
+    Top prediction for pic_053.jpg
+    Execution time:88.8918ms
+    --------------------------------------------------------------
+    83.6%	n02504013 Indian elephant, Elephas maximus
+    6.4%	n02397096 warthog
+    4.1%	n01871265 tusker
+    3.6%	n02504458 African elephant, Loxodonta africana
+    1.0%	n02415577 bighorn, bighorn sheep, cimarron, Rocky Mountain bighorn, Rocky Mountain sheep, Ovis canadensis
+
+    ==============================================================
     ```
+    ![](results/result_AlexNet.png)
 2. SqueezeNet (Caffe): `./examples/caffe/SqueezeNet/`
     ```bash
     # Make sure your current directory is "./examples/"
+    $ make squeezenet
     $ python3 image-classifier.py --graph ./caffe/SqueezeNet/graph --dim 227 227 --image ./data/images/pic_053.jpg
+    # You will get a similar result as follow:
+    ==============================================================
+    Top prediction for pic_053.jpg
+    Execution time:51.6916ms
+    --------------------------------------------------------------
+    92.2%	n02504013 Indian elephant, Elephas maximus
+    4.9%	n01871265 tusker
+    2.9%	n02504458 African elephant, Loxodonta africana
+    0.0%	n15075141 toilet tissue, toilet paper, bathroom tissue
+    0.0%	n02326432 hare
+
+    ==============================================================
     ```
-3. MobileNets (Tensorflow): `./examples/tensorflow/mobilenets/`
+    ![](results/result_SqueezeNet.png)
+3. Inception v3 (TensorFlow): `./examples/tensorflow/inception_v3/`
     ```bash
     # Make sure your current directory is "./examples/"
-    $ python3 image-classifier.py --graph ./tensorflow/mobilenets/graph --labels ./tensorflow/mobilenets/model/labels.txt --mean 127.5 --scale 0.00789 --dim 224 224 --colormode="RGB" --image ./data/images/pic_053.jpg
-    ```
-4. Inception (TensorFlow): `./examples/tensorflow/`
+    $ make inception_v3
+    $ python3 image-classifier.py --graph ./tensorflow/inception_v3/graph --labels ./tensorflow/inception_v3/labels.txt --mean 127.5 --scale 0.00789 --dim 299 299 --colormode="RGB" --image ./data/images/pic_053.jpg
+    ==============================================================
+    Top prediction for pic_053.jpg
+    Execution time:567.635ms
+    --------------------------------------------------------------
+    99.5%	386:Indian elephant, Elephas maximus
+    0.4%	102:tusker
+    0.1%	387:African elephant, Loxodonta africana
+    0.0%	48:African chameleon, Chamaeleo chamaeleon
+    0.0%	338:beaver
 
+    ==============================================================
+    ```
+    ![](results/result_InceptionV3.png)
+
+* How yo remove all the temporary and target files that are created by the `Makefile`?
+    ```bash
+    # Make sure your current directory is "./examples/"
+    # Take "./examples/caffe/GoogLeNet" as example
+    $ cd ./caffe/GoogLeNet/
+    $ make clean
+    ```
 
 ---
 ## 2.9 Customize this example!
@@ -251,6 +298,7 @@ You can use this examaple as a template for your custom image classfier applicat
     # Make sure your current directory is "./examples/"
     # Run the following comman to list all available options
     $ python3 image-classifier.py -h
+    
     ```
 2. In `./examples/image-classifier.py`
    1. Step 1, 2, and 5 are common across all Intel® Movidius™ NCS apps. You can reuse those functions without modifications
