@@ -1,6 +1,6 @@
 # Intel® Movidius™ NCSDK Practice
 
-This repository is used to practice some basic operation in ONOS controller and the original repository is [here](https://github.com/movidius/ncsdk).
+This repository is used to practice some basic operations in Intel® Movidius™ Neural Compute SDK (Intel® Movidius™ NCSDK) and the original repository is [here](https://github.com/movidius/ncsdk).
 
 * **NOTICE:** The following opreations are used in **Ubuntu Linux 16.04 LTS**.
 
