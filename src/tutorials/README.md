@@ -8,7 +8,7 @@ This directory is used for learning how to use Intel® Movidius™ NCSDK.
 ## Contents
 
 1. [Installation](1_install/)
-2. [Build a Application With Intel Movidius NCS](2_apps/)
+2. [Build a Application With Intel® Movidius™ NCS](2_apps/)
 
 (To be updated.)
 
