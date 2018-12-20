@@ -20,7 +20,7 @@ We are going to install Intel® Movidius™ NCSDK in this tutorial. There are so
 ---
 ## 1.1 Basic installation on Ubuntu Linux
 
-We are going to install *Intel® Movidius™ NCSDK* on **Ubuntu Linux 16.04 LTS (64-bit)** first. 
+We are going to install *Intel® Movidius™ NCSDK* on **Ubuntu Linux 16.04 LTS (64-bit)** first.
 
 1. Clone the repository from the GitHub
     ```bash
