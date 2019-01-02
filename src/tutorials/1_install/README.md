@@ -115,7 +115,7 @@ If you don't need to install *Intel® Movidius™ NCSDK* on Raspberry Pi, feel f
         ```
     4. Reload services
         ```bash
-        $ sudo systemctl darmon-reload
+        $ sudo systemctl daemon-reload
         $ sudo systemctl restart docker
         ```
     5. Edit `/etc/NetworkManager/NetworkManager.conf` (optional)
@@ -154,7 +154,7 @@ The following instructions are focus on **non-privileged Docker containers**. Ve
     # Chaneg the directory to "./ncsdk/extras/docker/"
     $ cd ./ncsdk/extras/docker/
     # Export the path to API src directory
-    $ export MVNC_API_PATH="../../api/src"
+    $ export MVNC_API_PATH=../../../api/src
     # Build the "ncs_boot_devices" program which loads the device firmware
     $ make ncs_boot_devices
     # Run the "ncs_boot_devices" to boot the devices and load the firmware
