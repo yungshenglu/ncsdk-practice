@@ -140,7 +140,7 @@ If you don't need to install *Intel® Movidius™ NCSDK* on Raspberry Pi, feel f
 
 ### 1.3.1 Use non-privileged Docker containers
 
-The following instructions are focus on **non-privileged Docker containers**. Versions of the NCSDK *prior to 2.08* required that the docker run command was issued with the `–privileged` flag. This is due to the way the NCS device boots and loads its firmware. If you need to run your Docker container with the `–privileged` flag you can skip this section and follow the instructions [here](https://movidius.github.io/ncsdk/docker.html#privileged-docker-containers).
+The following instructions are focus on **non-privileged Docker containers**. Versions of the Intel® Movidius™ NCSDK *prior to 2.08* required that the docker run command was issued with the `–privileged` flag. This is due to the way the NCS device boots and loads its firmware. If you need to run your Docker container with the `–privileged` flag you can skip this section and follow the instructions [here](https://movidius.github.io/ncsdk/docker.html#privileged-docker-containers).
 
 4. Create a Docker image for the Intel® Movidius™ NCSDK
     ```bash
@@ -172,32 +172,34 @@ The following instructions are focus on **non-privileged Docker containers**. Ve
 
 ### 1.3.2 Use privileged Docker containers
 
+* **NOTICE:** We have provided a Docker image for building the Intel® Movidius™ NCSDK environement. You can also follow the instructions [here](https://github.com/yungshenglu/Dockerfiles/tree/master/ncsdk-env).
+
 The simplest way to use the NCS within a docker container is to do it from a container thats running with the `–privileged` flag. This is not always desirable.
 
 1. Create a Docker image for the Intel® Movidius™ NCSDK
     ```bash
-    # Change the directory to "./ncsdk/"
+    # Change your current directory to "./ncsdk/"
     $ cd ./ncsdk/
     # Create a Docker image
     $ docker build -t ncsdk -f ./extras/docker/Dockerfile .
     ```
 2. Create and run a privileged Docker container from the built image
     ```bash
-    $ docker run --net=host --privileged -v /dev:/dev --name ncsdk -i -t ncsdk /bin/bash
+    $ docker run --net=host --privileged -v /dev:/dev --name ncsdk_c -i -t ncsdk /bin/bash
     ```
 
-### 1.3.3 How to use the Docker container with NCSDK?
+### 1.3.3 How to use the Docker container with Intel® Movidius™ NCSDK?
 
-1. Start the container
+1. Start the Docker container
     ```bash
     $ docker start -a -i ncsdk
     ```
-2. Build NCSDK examples (optional)
+2. Build Intel® Movidius™ NCSDK examples (optional)
     ```bash
     # Run the following command inside of your Docker container
     $ make examples
     ```
-3. Exit the container
+3. Exit the Docker container
     ```bash
     # Run the following command inside of your Docker container
     $ exit
