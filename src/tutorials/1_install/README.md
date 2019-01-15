@@ -89,7 +89,7 @@ If you don't need to install *Intel® Movidius™ NCSDK* on Raspberry Pi, feel f
 1. Prerequisite
     * Make sure you have already installed *Docker* on your Ubuntu Linux host
     * Follow the instructions to install `docker-ce` on your Ubuntu Linux host [here](https://docs.docker.com/install/linux/docker-ce/ubuntu)!
-2. Proxy configuration (for *Ubuntu Linux 16.04 LTS*)
+2. Proxy configuration (for *Ubuntu Linux 16.04 LTS*) (optional)
     1. Create a docker config file at `~/.docker/config.json`
         ```json
         // Replace the example proxy info with your proxy info
