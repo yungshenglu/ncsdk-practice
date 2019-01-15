@@ -174,7 +174,7 @@ The following instructions are focus on **non-privileged Docker containers**. Ve
 
 * **NOTICE:** We have provided a Docker image for building the Intel® Movidius™ NCSDK environement. You can also follow the instructions [here](https://github.com/yungshenglu/Dockerfiles/tree/master/ncsdk-env).
 
-The simplest way to use the NCS within a docker container is to do it from a container thats running with the `–privileged` flag. This is not always desirable.
+The simplest way to use the Intel® Movidius™ NCS within a docker container is to do it from a container thats running with the `–privileged` flag. This is not always desirable.
 
 1. Create a Docker image for the Intel® Movidius™ NCSDK (take few minutes)
     ```bash
