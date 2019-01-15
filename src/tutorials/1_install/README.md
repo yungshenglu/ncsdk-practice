@@ -181,18 +181,18 @@ The simplest way to use the Intel® Movidius™ NCS within a docker container is
     # Change your current directory to "./ncsdk/"
     $ cd ./ncsdk/
     # Create a Docker image
-    $ docker build -t ncsdk -f ./extras/docker/Dockerfile .
+    $ docker build -t ncsdk-env -f ./extras/docker/Dockerfile .
     ```
 2. Create and run a privileged Docker container from the built image
     ```bash
-    $ docker run --net=host --privileged -v /dev:/dev --name ncsdk_c -i -t ncsdk /bin/bash
+    $ docker run --net=host --privileged -v /dev:/dev --name ncsdk-env_c -i -t ncsdk-env /bin/bash
     ```
 
 ### 1.3.3 How to use the Docker container with Intel® Movidius™ NCSDK?
 
 1. Start the Docker container
     ```bash
-    $ docker start -a -i ncsdk
+    $ docker start -a -i ncsdk-env_c
     ```
 2. Build Intel® Movidius™ NCSDK examples (optional)
     ```bash
