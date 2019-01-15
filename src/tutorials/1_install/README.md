@@ -176,7 +176,7 @@ The following instructions are focus on **non-privileged Docker containers**. Ve
 
 The simplest way to use the NCS within a docker container is to do it from a container thats running with the `–privileged` flag. This is not always desirable.
 
-1. Create a Docker image for the Intel® Movidius™ NCSDK
+1. Create a Docker image for the Intel® Movidius™ NCSDK (take few minutes)
     ```bash
     # Change your current directory to "./ncsdk/"
     $ cd ./ncsdk/
