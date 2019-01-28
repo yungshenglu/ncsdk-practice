@@ -27,7 +27,7 @@ if __name__=="__main__":
     # Get a list of names for all the devices plugged into the system
     devices = fx.enumerate_devices()
     if (len(devices) < 1):
-        print("Error - no NCS devices detected, verify an NCS device is connected.")
+        print("ERROR: No NCS devices detected, verify an NCS device is connected.")
         quit() 
 
     # Get the first NCS device by its name
@@ -39,15 +39,15 @@ if __name__=="__main__":
     try:
         dev.open()
     except:
-        print("Error - Could not open NCS device.")
+        print("ERROR: Could not open NCS device.")
         quit()
-    print("Hello world, NCS! Device opened normally.")
+    print("INFO: Hello world, NCS! Device opened normally.")
     
     try:
         dev.close()
     except:
-        print("Error - could not close NCS device.")
+        print("ERROR: could not close NCS device.")
         quit()
-    print("Goodbye NCS! Device closed normally.")
-    print("NCS device working.")
+    print("INFO: Goodbye NCS! Device closed normally.")
+    print("INFO: NCS device working.")
     
